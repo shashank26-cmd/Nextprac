@@ -21,7 +21,7 @@ const Page = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3000/api/user/", details);
+            const response = await axios.post("http://localhost:3000/backend/api/user/", details);
             console.log("Response data: ", response.data);
     
             if (response.data.success) {

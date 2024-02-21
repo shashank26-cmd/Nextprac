@@ -24,7 +24,7 @@ const Page = () => {
     e.preventDefault();
     try {
       console.log("Sending login request with data:", details); // Log the data being sent
-      const data = await axios.post("http://localhost:3000/api/login/",
+      const data = await axios.post("http://localhost:3000/backend/api/login/",
         details
       );
 console.log(data);

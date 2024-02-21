@@ -1,6 +1,8 @@
 "use client"
 import React from 'react';
 import { useRouter } from 'next/navigation'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const Start = () => {
   const router =useRouter();
@@ -13,7 +15,6 @@ const Start = () => {
       <div className='d-flex gap-3 '>
         <button type="button" onClick={()=>router.push("/login")} className="btn btn-primary ">Login</button>
         <button type="button" onClick={handleRegisterroute}   className="btn btn-primary">Register</button>
-        {/* <button type="button" onClick={()=>router.push('/profile')}   className="btn btn-primary">profile</button> */}
 
       </div>
     </div>

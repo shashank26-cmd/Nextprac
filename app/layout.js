@@ -1,7 +1,9 @@
-import { Inter } from "next/font/google";
+import { ToastContainer } from "./nexttoast";
+import 'react-toastify/dist/ReactToastify.css'; 
 import "./globals.css";
+import AuthProvider from "./component/AuthProvider/AuthProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +13,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true}>{children}</body>
+    <body suppressHydrationWarning={true}>
+      <AuthProvider>
+      {children}
+
+      <ToastContainer />
+      </AuthProvider>
+
+    </body>
+
+
     </html>
   );
 }
